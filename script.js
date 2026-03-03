@@ -12,15 +12,8 @@ function CalcularIMC() {
     return;
   }
   let imc = peso / altura ** 2;
-
-  if (imc < 16) {
-    categoria = "Baixo peso(grau I)";
-  } else {
-    if (imc < 17) {
-      categoria = "Baixo peso(grau II)";
-    } else {
       if (imc < 18.5) {
-        categoria = "Baixo peso(grau III)";
+        categoria = "Baixo peso";
       } else {
         if (imc < 25) {
           categoria = "Peso adequado!";
@@ -40,8 +33,6 @@ function CalcularIMC() {
           }
         }
       }
-    }
-  }
 
   res.innerHTML =
     "Seu IMC é " + imc.toFixed(2) + " <br/>Sua categoria: " + categoria;
